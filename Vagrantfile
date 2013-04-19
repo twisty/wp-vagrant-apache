@@ -17,7 +17,7 @@ end
 
 Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |virtualbox|
-    # Allow symlinking content into the VirtualBox shared folder
+    # Allow symlinking content within the VirtualBox shared folder
     # https://github.com/mitchellh/vagrant/issues/713#issuecomment-15998495
     virtualbox.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
   end
